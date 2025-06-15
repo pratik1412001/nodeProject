@@ -149,6 +149,7 @@ body {
     padding: 0 67px;
     line-height: 52px;
     border-radius: 62px;
+    border: none;
 }
 
 
@@ -198,10 +199,15 @@ h2 {
     background-color: #000000;
     height: 38px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 24px;
 }
+
+/* .dark-mode i{
+    color: #fff;
+    font-size: 16px;
+} */
 
 .header-top p {
     color: #fff;
@@ -270,12 +276,13 @@ h2 {
     margin-right: 12px;
 }
 
-.carts-icon i {
+.carts-icon a {
     font-size: 24px;
     margin-right: 14px;
+    color: #000000;
 }
 
-.carts-icon i:last-child {
+.carts-icon a i:last-child {
     margin-right: 0px;
 }
 
@@ -465,11 +472,12 @@ h2 {
     padding: 25px 0 0 36px;
     height: 289px;
     border-radius: 20px;
-    margin:0 20px 20px 0;
-    
+    margin: 0 20px 20px 0;
+
 }
 
-.brwsStyle-ltmlft h4,.brwsStyle-ltmrgt h4 {
+.brwsStyle-ltmlft h4,
+.brwsStyle-ltmrgt h4 {
     font-size: 36px;
     font-weight: 700;
 }
@@ -486,62 +494,73 @@ h2 {
 }
 
 /* our happy customer start here  */
-.ourhappy-sec{
+.ourhappy-sec {
     margin-bottom: 80px;
 }
-.ourhapp-con h2{
+
+.ourhapp-con h2 {
     margin-bottom: 40px;
 }
-.ourhapp-itm{
+
+.ourhapp-itm {
     border: 1px solid #999999;
     border-radius: 20px;
     padding: 28px 32px;
     margin-right: 20px;
 }
-.ourhapp-itm h5{
+
+.ourhapp-itm h5 {
     font-size: 20px;
     font-weight: 700;
     color: #000000;
-    margin:19px 0 16px 0;
+    margin: 19px 0 16px 0;
 }
-.ourhapp-itm p{
+
+.ourhapp-itm p {
     font-size: 16px;
     font-weight: 400;
     color: #000000;
-    margin:19px 0 16px 0;
+    margin: 19px 0 16px 0;
 }
-.ourhapp-slider{
+
+.ourhapp-slider {
     display: flex;
-    
+
 }
 
 /* latest offer section start */
 .latstoffer-sec {
     padding: 50px 0;
 }
-.lstoffer-con{
+
+.lstoffer-con {
     background-color: #000000;
     padding: 43px 64px;
     border-radius: 20px;
 }
-.offer-itm{
+
+.offer-itm {
     display: flex;
     justify-content: space-between;
 }
-.offer-itmlft h2{
+
+.offer-itmlft h2 {
     font-size: 40px;
     font-weight: 700;
     color: #fff;
 }
-.offer-itmlft{
+
+.offer-itmlft {
     flex: 0 0 551px;
     max-width: 551px;
 }
-.offer-itmrgt{
+
+.offer-itmrgt {
     flex: 0 0 349px;
     max-width: 349px;
 }
-.email-address{
+
+.email-address {
     background-color: #fff;
     height: 48px;
     display: flex;
@@ -549,18 +568,22 @@ h2 {
     padding: 12px 16px;
     border-radius: 62px;
 }
-.email-address i{
+
+.email-address i {
     color: #999999;
     margin-right: 12px;
 }
-.email-address input{
+
+.email-address input {
     outline: none;
     border: none;
 }
-.news-btn{
+
+.news-btn {
     justify-content: center;
     margin-top: 14px;
 }
+
 .email-address p {
     color: #000000;
     text-align: center;
@@ -664,4 +687,86 @@ footer {
 
 .account-card ul li a:hover {
     background-color: #CCCCCC;
+}
+
+
+
+
+
+
+/* login popup start here  */
+.login-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-con {
+    background-color: #000000;
+    flex: 0 0 540px;
+    max-width: 540px;
+    padding: 48px 72px;
+    border-radius: 20px;
+}
+
+.login h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 32px;
+}
+.form-sec{
+    margin-bottom: 32px;
+}
+.form-input label {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.form-input input {
+    display: block;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    padding: 0 16px;
+    margin-bottom: 24px;
+}
+
+.password {
+    justify-content: space-between;
+    align-self: center;
+    display: flex;
+}
+
+.password a {
+    color: #fff;
+}
+.lgin-btn{
+    margin-bottom: 30px;
+}
+.lgin-btn button {
+    background-color: #1570EF;
+    width: 100%;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+
+}
+
+.google-btn button {
+    background-color: #26272B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login p{
+    color: #70707B;
+    text-align: center;
+}
+.login p a{
+    color: #A0A0AB;
 }
