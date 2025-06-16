@@ -16,3 +16,22 @@
 //     }
 // });
 
+// const openLink = document.getElementById('openModalLink');
+// const modal = document.getElementById('loginModal');
+// const closeBtn = document.getElementById('closeModalBtn');
+
+// openLink.onclick = function (e) {
+//     e.preventDefault(); // Prevent default anchor behavior
+//     modal.style.display = 'block';
+// };
+
+// closeBtn.onclick = function (e) {
+//     e.preventDefault(); // Prevent default anchor behavior
+//     modal.style.display = 'none';
+// };
+
+// window.onclick = function (e) {
+//     if (e.target === modal) {
+//         modal.style.display = 'none';
+//     }
+// };

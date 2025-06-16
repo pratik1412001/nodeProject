@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Signup</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+.login-popup-sec {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.login-con {
+    background-color: #131316CC;
+  
+}
+
+    .hidden {
+      display: none;
+    }
+
+    .close-btn {
+      display: none; /* Remove close buttons since we don't need modals */
+    }
+    .login-section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('/images/bg.png');
+    height: 100%;
+    width: 100%;
+}
+  </style>
+</head>
+
+<body>
+
+ <div class="login-section">
+     <!-- Signup Form (initially hidden) -->
+  <div class="login-popup-sec hidden" id="signupSection">
+    <div class="login-popup">
+      <div class="login-con">
+        <div class="login">
+          <h2>Create an account</h2>
+          <div class="form-sec">
+            <form action="/signup" method="POST">
+              <div class="form-input">
+                <label for="signupEmail">Email</label>
+                <input type="text" name="email" id="signupEmail" placeholder="Enter your email" required>
+              </div>
+              <div class="form-input">
+                <label for="signupPassword">Password</label>
+                <input type="password" name="password" id="signupPassword" placeholder="Enter a password" required>
+              </div>
+              <div class="lgin-btn">
+                <button type="submit">Create account</button>
+              </div>
+            </form>
+            <div class="lgin-btn google-btn">
+              <button type="button">
+                <img src="/images/Google.png" alt="" style="margin-right: 10px;">
+                Continue with Google
+              </button>
+            </div>
+          </div>
+          <p>Already have an account? <a href="#" id="switchToLogin">Log in</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Form (shown by default) -->
+  <div class="login-popup-sec" id="loginSection">
+    <div class="login-popup">
+      <div class="login-con">
+        <div class="login">
+          <h2>Login to your account</h2>
+          <div class="form-sec">
+            <form action="/login" method="POST">
+              <div class="form-input">
+                <label for="loginEmail">Email</label>
+                <input type="text" name="email" id="loginEmail" placeholder="Enter your email" required>
+              </div>
+              <div class="form-input">
+                <label for="loginPassword">Password</label>
+                <input type="password" name="password" id="loginPassword" placeholder="Enter a password" required>
+              </div>
+              <div class="lgin-btn">
+                <button type="submit">Login now</button>
+              </div>
+            </form>
+          </div>
+          <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+  <script>
+    const loginSection = document.getElementById('loginSection');
+    const signupSection = document.getElementById('signupSection');
+
+    const switchToSignup = document.getElementById('switchToSignup');
+    const switchToLogin = document.getElementById('switchToLogin');
+
+    switchToSignup.onclick = (e) => {
+      e.preventDefault();
+      loginSection.classList.add('hidden');
+      signupSection.classList.remove('hidden');
+    };
+
+    switchToLogin.onclick = (e) => {
+      e.preventDefault();
+      signupSection.classList.add('hidden');
+      loginSection.classList.remove('hidden');
+    };
+  </script>
+</body>
+
+</html>

@@ -699,6 +699,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .login-con {
@@ -707,6 +708,7 @@ footer {
     max-width: 540px;
     padding: 48px 72px;
     border-radius: 20px;
+    position: relative;
 }
 
 .login h2 {
@@ -714,9 +716,11 @@ footer {
     font-size: 28px;
     margin-bottom: 32px;
 }
-.form-sec{
+
+.form-sec {
     margin-bottom: 32px;
 }
+
 .form-input label {
     color: #fff;
     font-size: 16px;
@@ -731,6 +735,7 @@ footer {
     border-radius: 8px;
     padding: 0 16px;
     margin-bottom: 24px;
+    font-size: 19px;
 }
 
 .password {
@@ -742,9 +747,11 @@ footer {
 .password a {
     color: #fff;
 }
-.lgin-btn{
+
+.lgin-btn {
     margin-bottom: 30px;
 }
+
 .lgin-btn button {
     background-color: #1570EF;
     width: 100%;
@@ -763,10 +770,42 @@ footer {
     align-items: center;
 }
 
-.login p{
+.login p {
     color: #70707B;
     text-align: center;
 }
-.login p a{
+
+.login p a {
     color: #A0A0AB;
+}
+
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('/images/bg.png');
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 18px;
+    font-size: 46px;
 }

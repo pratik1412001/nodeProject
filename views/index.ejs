@@ -374,52 +374,77 @@
 
 
 
-			<!-- login popup here  -->
+			<!-- signup popup here  -->
 
-			<div class="login-popup">
-				<div class="login-con">
-					<div class="login">
-						<h2>Create an account</h2>
-						<div class="form-sec">
-							<div class="form-input">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" placeholder="enter a email">
-							</div>
-							<div class="form-input">
-								<div class="password">
-									<label for="email">Password</label>
-									<a href="#">Forgot？</a>
+			<div class="login-popup-sec modal" id="signupModal">
+				<div class="login-popup">
+					<div class="login-con">
+						<div class="login">
+							<h2>Create an account</h2>
+							<span class="close-btn" id="closeSignupBtn">&times;</span>
+							<div class="form-sec">
+								<div class="form-input">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" placeholder="enter a email">
 								</div>
-								<input type="password" name="password" id="password" placeholder="enter a password">
+								<div class="form-input">
+									<div class="password">
+										<label for="email">Password</label>
+										<a href="#">Forgot？</a>
+									</div>
+									<input type="password" name="password" id="password" placeholder="enter a password">
+								</div>
 							</div>
+							<div class="login-gblbtn">
+								<div class="lgin-btn">
+									<button>Create account</button>
+								</div>
+								<div class="lgin-btn google-btn">
+									<button>
+										<img src="/images/Google.png" alt="" style="margin-right: 10px;">
+										Continue with Google
+									</button>
+								</div>
+							</div>
+							<p>Already have an account ? <a href="#"  id="switchToLogin">Log in</a></p>
 						</div>
-						<div class="login-gblbtn">
-							<div class="lgin-btn">
-								<button>Create account</button>
-							</div>
-							<div class="lgin-btn google-btn">
-								<button>
-									<img src="/images/Google.png" alt="" style="margin-right: 10px;">
-									Continue with Google
-								</button>
-							</div>
-						</div>
-						<p>Already have an account ? <a href="#">Log in</a></p>
 					</div>
 				</div>
 			</div>
 
 
+			<!-- login popup start here  -->
 
+			<div class="login-popup-sec modal"id="loginModal">
+				<div class="login-popup">
+					<div class="login-con">
+						<div class="login">
+							<h2>Login to your account</h2>
+							<span class="close-btn" id="closeLoginBtn">&times;</span>
+							<div class="form-sec">
+								<div class="form-input">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" placeholder="enter a email">
+								</div>
+								<div class="form-input">
+									<div class="password">
+										<label for="email">Password</label>
+										<a href="#">Forgot？</a>
+									</div>
+									<input type="password" name="password" id="password" placeholder="enter a password">
+								</div>
+							</div>
+							<div class="login-gblbtn">
+								<div class="lgin-btn">
+									<button>Login now</button>
+								</div>
 
-
-
-
-
-
-
-
-
+							</div>
+							<p>Already have an account ? <a href="#" id="switchToSignup">Sign up</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
 
 
 			<!-- script start link  -->
@@ -447,6 +472,53 @@
 						]
 					});
 				});
+
+				// Get elements
+				const loginModal = document.getElementById('loginModal');
+				const signupModal = document.getElementById('signupModal');
+
+				const openLoginBtn = document.getElementById('openLoginBtn');
+				const openSignupBtn = document.getElementById('openSignupBtn');
+
+				const closeLoginBtn = document.getElementById('closeLoginBtn');
+				const closeSignupBtn = document.getElementById('closeSignupBtn');
+
+				const switchToLogin = document.getElementById('switchToLogin');
+				const switchToSignup = document.getElementById('switchToSignup');
+
+				// Open modals
+				openLoginBtn.onclick = (e) => {
+					e.preventDefault();
+					loginModal.style.display = 'block';
+				};
+
+				openSignupBtn.onclick = (e) => {
+					e.preventDefault();
+					signupModal.style.display = 'block';
+				};
+
+				// Close modals
+				closeLoginBtn.onclick = () => loginModal.style.display = 'none';
+				closeSignupBtn.onclick = () => signupModal.style.display = 'none';
+
+				// Switch between modals
+				switchToSignup.onclick = (e) => {
+					e.preventDefault();
+					loginModal.style.display = 'none';
+					signupModal.style.display = 'block';
+				};
+
+				switchToLogin.onclick = (e) => {
+					e.preventDefault();
+					signupModal.style.display = 'none';
+					loginModal.style.display = 'block';
+				};
+
+				// Close on outside click
+				window.onclick = function (event) {
+					if (event.target === loginModal) loginModal.style.display = 'none';
+					if (event.target === signupModal) signupModal.style.display = 'none';
+				};
 			</script>
 
 </body>
